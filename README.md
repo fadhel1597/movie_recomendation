@@ -1,8 +1,8 @@
-# Laporan Proyek Machine Learning - Nama Anda
+# Laporan Proyek Machine Learning - Muhammad Fadhel Haidar
 
 ## Project Overview
 
-Pada bagian ini, Kamu perlu menuliskan latar belakang yang relevan dengan proyek yang diangkat.
+Sistem rekomendasi film adalah salah satu jenis sistem yang digunakan untuk membantu pengguna dalam menemukan film yang sesuai dengan minat dan preferensi mereka. Salah satu metode yang digunakan dalam sistem rekomendasi ini adalah metode cosine similarity, yang mengukur kemiripan antara dua vektor dalam ruang vektor. Dalam proyek ini, kami akan menggunakan konten film dan data pengguna untuk menentukan rekomendasi film yang sesuai dengan preferensi pengguna. Tujuan dari proyek ini adalah untuk meningkatkan efisiensi dan efektivitas dalam memberikan rekomendasi film kepada pengguna.
 
 **Rubrik/Kriteria Tambahan (Opsional)**:
 - Jelaskan mengapa proyek ini penting untuk diselesaikan.
