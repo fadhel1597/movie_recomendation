@@ -2,7 +2,14 @@
 
 ## Project Overview
 
+Film telah menjadi salah satu bentuk hiburan yang populer di kalangan masyarakat. Namun, dengan jumlah judul film yang begitu banyak yang sudah mencapai lebih dari 6 juta judul di situs https://www.imdb.com/ pada dathun 2021, masyarakat kadang kesulitan dalam menemukan film yang sesuai dengan minat mereka. Oleh karena itu, dikembangkanlah sebuah sistem yang dapat membantu masyarakat dalam menemukan film yang sesuai dengan preferensi mereka. Sistem tersebut menggunakan data rating film yang terdapat dalam suatu website untuk menganalisis hubungan antar film dan memberikan rekomendasi film kep ada pengguna.
+
 Sistem rekomendasi film adalah salah satu jenis sistem yang digunakan untuk membantu pengguna dalam menemukan film yang sesuai dengan minat dan preferensi mereka. Salah satu metode yang digunakan dalam sistem rekomendasi ini adalah metode cosine similarity, yang mengukur kemiripan antara dua vektor dalam ruang vektor. Dalam proyek ini, kami akan menggunakan konten film dan data pengguna untuk menentukan rekomendasi film yang sesuai dengan preferensi pengguna. Tujuan dari proyek ini adalah untuk meningkatkan efisiensi dan efektivitas dalam memberikan rekomendasi film kepada pengguna.
+
+
+
+
+ 
 
 **Rubrik/Kriteria Tambahan (Opsional)**:
 - Jelaskan mengapa proyek ini penting untuk diselesaikan.
