@@ -2,14 +2,11 @@
 
 ## Project Overview
 
-Film telah menjadi salah satu bentuk hiburan yang populer di kalangan masyarakat. Namun, dengan jumlah judul film yang begitu banyak yang sudah mencapai lebih dari 6 juta judul di situs https://www.imdb.com/ pada dathun 2021, masyarakat kadang kesulitan dalam menemukan film yang sesuai dengan minat mereka. Oleh karena itu, dikembangkanlah sebuah sistem yang dapat membantu masyarakat dalam menemukan film yang sesuai dengan preferensi mereka. Sistem tersebut menggunakan data rating film yang terdapat dalam suatu website untuk menganalisis hubungan antar film dan memberikan rekomendasi film kep ada pengguna.
+Permasalahan dalam pembuatan sistem klasifikasi komen toxic menggunakan machine learning adalah mengidentifikasi komentar yang tidak sesuai atau merugikan di dalam suatu platform online. Komen toxic dapat mencakup tindakan cyberbullying, pembuatan konten yang menyinggung, atau pembuatan konten yang menyebarluaskan hoax. Hal ini menjadi masalah penting karena komentar toxic dapat mempengaruhi pengalaman pengguna secara negatif dan membahayakan lingkungan online (Jurnal of Medical Internet Research, 2018).
 
-Sistem rekomendasi film adalah salah satu jenis sistem yang digunakan untuk membantu pengguna dalam menemukan film yang sesuai dengan minat dan preferensi mereka. Salah satu metode yang digunakan dalam sistem rekomendasi ini adalah metode cosine similarity, yang mengukur kemiripan antara dua vektor dalam ruang vektor. Dalam proyek ini, kami akan menggunakan konten film dan data pengguna untuk menentukan rekomendasi film yang sesuai dengan preferensi pengguna. Tujuan dari proyek ini adalah untuk meningkatkan efisiensi dan efektivitas dalam memberikan rekomendasi film kepada pengguna.
+Pembuatan sistem klasifikasi komen toxic menggunakan machine learning diperlukan untuk membantu platform online dalam mengontrol konten yang tidak sesuai yang muncul di dalam komunitas mereka. Machine learning dapat digunakan untuk menganalisis komentar dan mengklasifikasikan mereka sebagai toxic atau tidak toxic dengan cepat dan efisien. Hal ini dapat membantu platform online dalam mengurangi jumlah komentar toxic yang muncul di dalam komunitas mereka, sehingga dapat meningkatkan pengalaman pengguna yang sehat dan aman (Computers in Human Behavior, 2017).
 
-
-
-
- 
+Selain itu, penggunaan machine learning dalam sistem klasifikasi komen toxic juga dapat membantu dalam meningkatkan akurasi dalam mengidentifikasi komentar toxic. Machine learning dapat belajar dari data yang diberikan dan mengevaluasi komentar baru dengan lebih baik daripada metode manual (IEEE Transactions on Dependable and Secure Computing, 2019). Selain itu, sistem klasifikasi komen toxic menggunakan machine learning juga dapat dioptimalkan dan diperbarui secara berkala seiring dengan perubahan dalam tipe komentar toxic yang muncul.
 
 **Rubrik/Kriteria Tambahan (Opsional)**:
 - Jelaskan mengapa proyek ini penting untuk diselesaikan.
