@@ -2,21 +2,18 @@
 
 ## Project Overview
 
-Permasalahan dalam pembuatan sistem klasifikasi komen toxic menggunakan machine learning adalah mengidentifikasi komentar yang tidak sesuai atau merugikan di dalam suatu platform online. Komen toxic dapat mencakup tindakan cyberbullying, pembuatan konten yang menyinggung, atau pembuatan konten yang menyebarluaskan hoax. Hal ini menjadi masalah penting karena komentar toxic dapat mempengaruhi pengalaman pengguna secara negatif dan membahayakan lingkungan online (Jurnal of Medical Internet Research, 2018).
-
-Pembuatan sistem klasifikasi komen toxic menggunakan machine learning diperlukan untuk membantu platform online dalam mengontrol konten yang tidak sesuai yang muncul di dalam komunitas mereka. Machine learning dapat digunakan untuk menganalisis komentar dan mengklasifikasikan mereka sebagai toxic atau tidak toxic dengan cepat dan efisien. Hal ini dapat membantu platform online dalam mengurangi jumlah komentar toxic yang muncul di dalam komunitas mereka, sehingga dapat meningkatkan pengalaman pengguna yang sehat dan aman (Computers in Human Behavior, 2017).
-
-Selain itu, penggunaan machine learning dalam sistem klasifikasi komen toxic juga dapat membantu dalam meningkatkan akurasi dalam mengidentifikasi komentar toxic. Machine learning dapat belajar dari data yang diberikan dan mengevaluasi komentar baru dengan lebih baik daripada metode manual (IEEE Transactions on Dependable and Secure Computing, 2019). Selain itu, sistem klasifikasi komen toxic menggunakan machine learning juga dapat dioptimalkan dan diperbarui secara berkala seiring dengan perubahan dalam tipe komentar toxic yang muncul.
+Media sosial merupakan salah satu platform yang sangat populer di era digital saat ini. Namun, di balik kepopulerannya, media sosial juga menyimpan berbagai masalah, salah satunya adalah komentar toxic. Komentar toxic adalah komentar yang menyebarluaskan ujaran kebencian, menyakiti, atau menyebarkan informasi yang tidak benar. Penelitian menunjukkan bahwa komentar toxic dapat menyebabkan efek negatif pada mental dan emosional pengguna media sosial. Hal ini karena komentar toxic dapat menimbulkan rasa tidak aman, kecemasan, dan depresi pada individu yang menerima komentar tersebut [Online Social Networking and Mental Health](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4183915/). Selain itu, komentar toxic juga dapat menyebarluaskan propaganda dan menyebarkan informasi yang salah, yang dapat mempengaruhi opini publik dan menyebabkan kerusakan pada lingkungan sosial.
 
 **Rubrik/Kriteria Tambahan (Opsional)**:
 - Jelaskan mengapa proyek ini penting untuk diselesaikan.
 - Menyertakan hasil riset terkait atau referensi. Referensi yang diberikan harus berasal dari sumber yang kredibel dan author yang jelas.
   
-  Format Referensi: [Judul Referensi](https://scholar.google.com/) 
+  Format Referensi: 
 
 ## Business Understanding
 
-Pada bagian ini, Anda perlu menjelaskan proses klarifikasi masalah.
+Bila dilihat dari latar belakang yang sudah dijelaskan sebelumnya, maka didapati rumusan masalah sebagai berikut:
+
 
 Bagian laporan ini mencakup:
 
