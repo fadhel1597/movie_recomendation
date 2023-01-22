@@ -53,18 +53,13 @@ Berdasarkan data yang sudah didapatkan sebelumnya, didapatkan jumlah data untuk 
 | identity_hate | 1405
 | non_toxic	| 143346
 
-kemudian terdapat nilai korelasi antar label yang didapatkan menggunakan library 'seaborn', didapatkan nilainya sebagai berikut 
-![Heatmap for Data Correlation](https://imgur.com/gallery/d1aF4Gg) 
+kemudian dari masing-masing label terdapat nilai nilai korelasi antar label yang didapatkan menggunakan library 'seaborn', didapatkan nilainya sebagai berikut 
 
-**Rubrik/Kriteria Tambahan (Opsional)**:
-- Melakukan beberapa tahapan yang diperlukan untuk memahami data, contohnya teknik visualisasi data beserta insight atau exploratory data analysis.
+![Heatmap for Data Correlation](https://i.imgur.com/eaYtRfg.png)  
+
 
 ## Data Preparation
-Pada bagian ini Anda menerapkan dan menyebutkan teknik data preparation yang dilakukan. Teknik yang digunakan pada notebook dan laporan harus berurutan.
-
-**Rubrik/Kriteria Tambahan (Opsional)**: 
-- Menjelaskan proses data preparation yang dilakukan
-- Menjelaskan alasan mengapa diperlukan tahapan data preparation tersebut.
+Beradasarkan data yang sudah didapatkan sebelumnya masih terdapat karakter atau while yang space yang tidak diperlukan, sehingga diperlukannya proses 
 
 ## Modeling
 Tahapan ini membahas mengenai model sisten rekomendasi yang Anda buat untuk menyelesaikan permasalahan. Sajikan top-N recommendation sebagai output.
@@ -80,9 +75,3 @@ Ingatlah, metrik evaluasi yang digunakan harus sesuai dengan konteks data, probl
 
 **Rubrik/Kriteria Tambahan (Opsional)**: 
 - Menjelaskan formula metrik dan bagaimana metrik tersebut bekerja.
-
-**---Ini adalah bagian akhir laporan---**
-
-_Catatan:_
-- _Anda dapat menambahkan gambar, kode, atau tabel ke dalam laporan jika diperlukan. Temukan caranya pada contoh dokumen markdown di situs editor [Dillinger](https://dillinger.io/), [Github Guides: Mastering markdown](https://guides.github.com/features/mastering-markdown/), atau sumber lain di internet. Semangat!_
-- Jika terdapat penjelasan yang harus menyertakan code snippet, tuliskan dengan sewajarnya. Tidak perlu menuliskan keseluruhan kode project, cukup bagian yang ingin dijelaskan saja.
