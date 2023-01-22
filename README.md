@@ -15,16 +15,12 @@ Masalah yang telah dibahas sebelumnya adalah komentar toxic yang terjadi di medi
 ### Problem Statements
 
 - Bagaimanakah nilai _accuracy_ dari model sistem klasifikasi yang dibuat?
-- Bagaimanakan nilai _precision_ dari model sistem klasifikasi yang dibuat?
-- Bagaimanakan nilai _Recall_ dari model sistem klasifikasi yang dibuat?
-- Bagaimanakan nilai _F1-Score_ dari model sistem klasifikasi yang dibuat?
+- Bagaimanakan nilai _loss_ dari model sistem klasifikasi yang dibuat?
 
 ### Goals
 
 - Mendapatkan nilai _accuracy_ dari model sistem klasifikasi.
-- Mendapatkan nilai _precision_ dari model sistem klasifikasi.
-- Mendapatkan nilai _Recall_ dari model sistem klasifikasi.
-- Mendapatkan nilai _F1-Score_ dari model sistem klasifikasi.
+- Mendapatkan nilai _loss_ dari model sistem klasifikasi.
  
      ### Solution statements
      Metode yang digunakan untuk membuat sistem klasifikasi adalah 'FastTex' yang merupakan *pre-trained embedding library* untuk proses *embedding* dari kata-kata          yang akan dilatih, 'FastText' merupakan *pre-trained embedding library* yang dikembangkan oleh *Facebook AI Research (FAIR)* untuk melakuka proses vektorisasi dan      klasifikasi dari data *text* menggunakan metode *n-gram characters* sebagai unit terkecilnya. Tujuan dari pemilihan *FastText* adalah untuk meningkatkan performa      dari model.
@@ -59,7 +55,9 @@ kemudian dari masing-masing label terdapat nilai nilai korelasi antar label yang
 
 
 ## Data Preparation
-Beradasarkan data yang sudah didapatkan sebelumnya masih terdapat karakter atau while yang space yang tidak diperlukan, sehingga diperlukannya proses 
+Beradasarkan data yang sudah didapatkan sebelumnya masih terdapat karakter atau *white space* yang tidak diperlukan, sehingga diperlukannya proses pembersihan dari data sebelum data di-*token* dan dilatih. 
+
+
 
 ## Modeling
 Tahapan ini membahas mengenai model sisten rekomendasi yang Anda buat untuk menyelesaikan permasalahan. Sajikan top-N recommendation sebagai output.
