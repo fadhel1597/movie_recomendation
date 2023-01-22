@@ -26,15 +26,35 @@ Masalah yang telah dibahas sebelumnya adalah komentar toxic yang terjadi di medi
 - Mendapatkan nilai _Recall_ dari model sistem klasifikasi.
 - Mendapatkan nilai _F1-Score_ dari model sistem klasifikasi.
  
-### Solution statements
-Metode yang digunakan untuk membuat sistem klasifikasi adalah 'FastTex' yang merupakan *pre-trained embedding library* untuk proses *embedding* dari kata-kata yang akan dilatih, 'FastText' merupakan *pre-trained embedding library* yang dikembangkan oleh *Facebook AI Research (FAIR)* untuk melakuka proses vektorisasi dan klasifikasi dari data *text* menggunakan metode *n-gram characters* sebagai unit terkecilnya. Tujuan dari pemilihan *FastText* adalah untuk meningkatkan performa dari model.
+     ### Solution statements
+     Metode yang digunakan untuk membuat sistem klasifikasi adalah 'FastTex' yang merupakan *pre-trained embedding library* untuk proses *embedding* dari kata-kata          yang akan dilatih, 'FastText' merupakan *pre-trained embedding library* yang dikembangkan oleh *Facebook AI Research (FAIR)* untuk melakuka proses vektorisasi dan      klasifikasi dari data *text* menggunakan metode *n-gram characters* sebagai unit terkecilnya. Tujuan dari pemilihan *FastText* adalah untuk meningkatkan performa      dari model.
     
 ## Data Understanding
 
-Pada *dataset Toxic Comment Classification* terdapat kolom id	comment_text	toxic	severe_toxic	obscene	threat	insult	identity_hate	non_toxic
-- accepts : merupakan jenis pembayaran yang diterima pada restoran tertentu.
-- cuisine : merupakan jenis masakan yang disajikan pada restoran.
-- dst
+Pada *dataset Toxic Comment Classification* terdapat kolom *id,	comment_text,	toxic,	severe_toxic,	obscene,	threat,	insult,	identity_hate,	non_toxic*
+- id : merupakan kolom yang berisikan nomor *id* dari masing-masing data *text*.
+- comment_text : merupakan kolom untuk data *text* yang nantinya akan diolah dan dilatih.
+- toxic : kolom ini merupakan kolom untuk label atau kelas dari dataset yang berisikan kalimat yang bersifat *toxic.
+- severe_toxic : kolom ini merupakan kolom untuk label atau kelas dari dataset yang berisikan kalimat yang bersifat sangat *toxic.
+- obscene : kolom ini merupakan kolom untuk label atau kelas dari dataset yang berisikan kalimat yang bersifat cabul atau tidak senonoh. 
+- threat : kolom ini merupakan kolom untuk label atau kelas dari dataset yang berisikan kalimat yang bersifat ancaman.
+- identity_hate : kolom ini merupakan kolom untuk label atau kelas dari dataset yang berisikan kalimat yang bersifat rasis atau menyangkut SARA.
+- non_toxic : kolom ini merupakan kolom untuk label atau kelas dari dataset yang berisikan kalimat yang btidak termasuk dari 6 label sebelumnya, label *non_toxic* dibuat berdasarkan dari data yang yang tidak memiliki label dan atau sebagai data negatif.
+
+Berdasarkan data yang sudah didapatkan sebelumnya, didapatkan jumlah data untuk masing-masing label sebagai berikut
+
+| category	 | number of comments |
+| :-------------: | :-------------: |
+| toxic | 15294 |
+| severe_toxic | 1595
+| obscene | 8449
+| threat	| 478
+| insult | 7877
+| identity_hate | 1405
+| non_toxic	| 143346
+
+kemudian terdapat nilai korelasi antar label yang didapatkan menggunakan library 'seaborn', didapatkan nilainya sebagai berikut 
+![Heatmap for Data Correlation](https://imgur.com/gallery/d1aF4Gg) 
 
 **Rubrik/Kriteria Tambahan (Opsional)**:
 - Melakukan beberapa tahapan yang diperlukan untuk memahami data, contohnya teknik visualisasi data beserta insight atau exploratory data analysis.
