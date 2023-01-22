@@ -26,15 +26,12 @@ Masalah yang telah dibahas sebelumnya adalah komentar toxic yang terjadi di medi
 - Mendapatkan nilai _Recall_ dari model sistem klasifikasi.
 - Mendapatkan nilai _F1-Score_ dari model sistem klasifikasi.
  
-    ### Solution statements
-Metode yang digunakan untuk membuat sistem klasifikasi adalah 'FastTex' yang merupakan *pre-trained embedding library* untuk proses *embedding* dari kata-kata yang akan dilatih, 'FastText' merupakan * pre-trained embedding library* yang dikembangkan oleh *Facebook AI Research (FAIR)* untuk melakuka proses vektorisasi dan klasifikasi dari data *text* menggunakan metode *n-gram characters* sebagai unit terkecilnya. Tujuan dari pemilihan *FastText* adalah untuk meningkat performa dari model.
+### Solution statements
+Metode yang digunakan untuk membuat sistem klasifikasi adalah 'FastTex' yang merupakan *pre-trained embedding library* untuk proses *embedding* dari kata-kata yang akan dilatih, 'FastText' merupakan *pre-trained embedding library* yang dikembangkan oleh *Facebook AI Research (FAIR)* untuk melakuka proses vektorisasi dan klasifikasi dari data *text* menggunakan metode *n-gram characters* sebagai unit terkecilnya. Tujuan dari pemilihan *FastText* adalah untuk meningkatkan performa dari model.
     
 ## Data Understanding
 
-
-Selanjutnya, uraikanlah seluruh variabel atau fitur pada data. Sebagai contoh:  
-
-Variabel-variabel pada Restaurant UCI dataset adalah sebagai berikut:
+Pada *dataset Toxic Comment Classification* terdapat kolom id	comment_text	toxic	severe_toxic	obscene	threat	insult	identity_hate	non_toxic
 - accepts : merupakan jenis pembayaran yang diterima pada restoran tertentu.
 - cuisine : merupakan jenis masakan yang disajikan pada restoran.
 - dst
