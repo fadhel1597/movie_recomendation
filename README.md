@@ -52,14 +52,15 @@ Berdasarkan analisis data yang telah dilakukan, diperoleh jumlah observasi untuk
 
 Berikut merupakan visualisasi dari distribusi data. 
 
-![Data Distribtuion Visualization](https://i.imgur.com/I1QmknU.png)
+![I1QmknU](https://user-images.githubusercontent.com/66835763/214020815-1f6d4078-ad2e-484d-b021-c674da825223.png)
 ###### Gambar 1, Visualisasi Distribusi Data
 
 
 Setelah mengidentifikasi label-label yang ada pada data, korelasi antar label dianalisis menggunakan library 'seaborn'. Hasil analisis menunjukkan nilai-nilai korelasi antar label yang diperoleh. Berikuit merupakan hasil visualisasi dari korelasi antar data.
 
-![Heatmap for Data Correlation](https://i.imgur.com/5bLBzpt.png)  
+![5bLBzpt](https://user-images.githubusercontent.com/66835763/214021230-4b15cd32-afb1-490b-8451-efd3cdaf9385.png)
 ###### Gambar 2, Visualisasi Korelasi Data
+
 
 ## Data Preparation
 Berdasarkan analisis data yang telah dilakukan sebelumnya, didapatkan bahwa dataset yang digunakan masih mengandung nilai-nilai yang tidak relevan untuk digunakan dalam proses pemodelan. Oleh karena itu, dibutuhkan tahap preparasi dataset yang disebut dengan proses data cleaning untuk menghilangkan nilai-nilai yang tidak diperlukan dan membuat dataset menjadi lebih bersih. Tahapan-tahapan yang dilakukan dalam proses data cleaning ini adalah sebagai berikut :
