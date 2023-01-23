@@ -153,39 +153,40 @@ Total jumlah parameter yang digunakan oleh model adalah 57,238,248 dan semua lap
 
 ## Evaluation
 
-Hasil evaluasi di atas menunjukkan hasil dari proses pelatihan model dan evaluasi model pada data validasi. Proses pelatihan dilakukan selama 5 epoch dengan 4488 data latih dan evaluasi dilakukan pada data validasi.
+Pelatihan dilakukan selama 4 epoch atau siklus. Dalam setiap epoch, model diterapkan pada 4488 data latih dan data validasi.
 
-Pada setiap epoch, ditunjukkan nilai loss dan accuracy untuk data latih dan data validasi. Loss digunakan untuk mengukur tingkat kesalahan dari model dalam memprediksi data latih, sedangkan accuracy digunakan untuk mengukur tingkat akurasi model dalam memprediksi data latih.
+Pada setiap epoch, terlihat bahwa nilai loss (nilai yang menunjukkan seberapa jauh prediksi model dari hasil yang sebenarnya) semakin kecil dan nilai akurasi (persentase data yang diklasifikasikan dengan benar) semakin tinggi. Namun, pada data validasi, nilai loss dan akurasi tidak berubah selama 4 epoch.
 
-Pada epoch pertama, nilai loss pada data latih adalah 0.0598 dan nilai accuracy adalah 0.9390, sementara nilai loss pada data validasi adalah 0.0476 dan nilai accuracy adalah 0.9934. Ini menunjukkan bahwa model cukup baik dalam memprediksi data latih dan data validasi.
+Loss pada epoch pertama adalah 0.1036 dan akurasi 0.7810. Pada epoch keempat, loss adalah 0.0438 dan akurasi 0.9770. Hal ini menunjukkan bahwa model semakin baik dalam mengenali dan memprediksi data latih. Namun, karena nilai validasi tidak berubah, ini menunjukkan bahwa model mungkin mulai overfitting (mempelajari data latih dengan sangat baik namun kurang baik pada data baru)
 
-Pada epoch kedua, nilai loss pada data latih dan data validasi menurun, yaitu 0.0431 dan 0.0459, serta nilai accuracy meningkat pada data latih dan data validasi, yaitu 0.9753 dan 0.9937.
+Itu artinya, model sudah cukup baik dalam memprediksi data latih, namun kurang baik dalam memprediksi data baru. Oleh karena itu, perlu ditambahkan data validasi atau diterapkan teknik lain untuk mengurangi overfitting.
 
-Pada epoch ketiga, nilai loss pada data latih menurun, yaitu 0.0367, tetapi nilai loss pada data validasi meningkat, yaitu 0.0462. Sedangkan nilai accuracy pada data latih menurun, yaitu 0.9665 dan nilai accuracy pada data validasi tetap stabil, yaitu 0.9934.
+```
+Epoch 1/4
+4488/4488 [==============================] - 147s 32ms/step - loss: 0.1036 - accuracy: 0.7810 - val_loss: 0.0565 - val_accuracy: 0.9940
+Epoch 2/4
+4488/4488 [==============================] - 147s 33ms/step - loss: 0.0524 - accuracy: 0.9535 - val_loss: 0.0512 - val_accuracy: 0.9940
+Epoch 3/4
+4488/4488 [==============================] - 145s 32ms/step - loss: 0.0463 - accuracy: 0.9690 - val_loss: 0.0510 - val_accuracy: 0.9940
+Epoch 4/4
+4488/4488 [==============================] - 145s 32ms/step - loss: 0.0438 - accuracy: 0.9770 - val_loss: 0.0502 - val_accuracy: 0.9940
+```
 
-Pada epoch keempat, nilai loss pada data latih menurun, yaitu 0.0310, tetapi nilai loss pada data validasi meningkat, yaitu 0.0496. Sedangkan nilai accuracy pada data latih menurun drastis, yaitu 0.8930 dan nilai accuracy pada data validasi menurun, yaitu 0.9875.
-
-Pada epoch kelima, nilai loss pada data latih menurun, yaitu 0.0264, tetapi nilai loss pada data validasi meningkat, yaitu 0.0552. Sedangkan nilai accuracy pada data latih menurun drastis, yaitu 0.7515 dan nilai accuracy pada data validasi menurun drastis, yaitu 0.6547.
-
-Dari hasil evaluasi tersebut, dapat disimpulkan bahwa model kurang baik dalam memprediksi data validasi pada epoch keempat dan kelima. Oleh karena itu perlu melakukan perbaikan pada model atau menggunakan data latih yang lebih banyak untuk meningkatkan performa model.
-
-Berikut merupaka hasil visualisasi dari evaluasi model pada data validasi
-
- 
-![Visualisasi Evalusai](https://i.imgur.com/CSnDNIX.png0)
+download.png
+![download](https://user-images.githubusercontent.com/66835763/214025576-d2e16700-7fb1-4b12-b446-24f88b9df655.png)
 ###### Gambar 3, Visualisasi Data Latih
 
 ###### Hasil Data Uji
 ```
-2000/2000 [==============================] - 16s 8ms/step - loss: 0.0827 - accuracy: 0.6621
-Test Loss: 0.08266670256853104
-Test Accuracy: 0.6620713472366333
+2000/2000 [==============================] - 16s 8ms/step - loss: 0.0728 - accuracy: 0.9976
+Test Loss: 0.07284168154001236
+Test Accuracy: 0.9976085424423218
 ```
-Hasil di atas menunjukkan hasil evaluasi dari model yang dilatih pada data uji. Data uji terdiri dari 2000 data yang digunakan untuk mengevaluasi performa model setelah proses pelatihan.
+Ini adalah hasil pengujian model setelah dilatih. Model diterapkan pada 2000 data uji.
 
-Pada hasil di atas ditunjukkan nilai loss dan accuracy dari data uji. Loss digunakan untuk mengukur tingkat kesalahan dari model dalam memprediksi data uji, sedangkan accuracy digunakan untuk mengukur tingkat akurasi model dalam memprediksi data uji.
+Dari hasil pengujian, dapat dilihat bahwa nilai loss (nilai yang menunjukkan seberapa jauh prediksi model dari hasil yang sebenarnya) adalah 0.0728 dan nilai akurasi (persentase data yang diklasifikasikan dengan benar) adalah 0.9976. Hal ini menunjukkan bahwa model cukup baik dalam mengenali dan memprediksi data uji.
 
-Nilai loss pada data uji adalah 0.0827 dan nilai accuracy adalah 0.6621. Ini menunjukkan bahwa model kurang baik dalam memprediksi data uji. Namun, nilai loss dan accuracy yang dihasilkan dari data uji sesuai dengan hasil evaluasi data validasi. Oleh karena itu, perlu melakukan perbaikan pada model atau menggunakan data latih yang lebih banyak untuk meningkatkan performa model.
+Nilai akurasi yang tinggi menunjukkan bahwa model sudah cukup baik dalam memprediksi data uji. Namun, perlu diingat bahwa nilai ini hanya menunjukkan hasil pada data uji yang digunakan saat ini, dan belum tentu menunjukkan hasil yang sama pada data uji yang berbeda atau data baru.
 
 
 ###### Testing Menggunakan *Text*
