@@ -189,11 +189,28 @@ Nilai loss pada data uji adalah 0.0827 dan nilai accuracy adalah 0.6621. Ini men
 
 ###### Testing Menggunakan *Text*
 ```
-I was merely apologising for my interference ;)
-{'toxic': 0.49575552, 'severe_toxic': 0.00014199194, 'obscene': 0.12559554, 'threat': 0.00037173877, 'insult': 0.019666055, 'identity_hate': 0.001066677, 'non_toxic': 0.5097154}
-
-
 your blatant pov pushing neither of you guys has made any contribution to this italian history article other than to shove your unhistorical unconstructive modern pov in my face. this is a history article. history. have you heard of that? this is the reason why so many people get pissed off about the pedantry and idiocy and triviality of wikipedia. j sus. get a f cking life.
 {'toxic': 0.98362917, 'severe_toxic': 0.06779731, 'obscene': 0.89391726, 'threat': 0.0013799085, 'insult': 0.5765569, 'identity_hate': 0.011462662, 'non_toxic': 0.00090842607}
 Actual Values: {'toxic': 1, 'severe_toxic': 0, 'obscene': 1, 'threat': 0, 'insult': 0, 'identity_hate': 0, 'non_toxic': 0}
 ```
+Hasil di atas adalah hasil dari proses klasifikasi teks oleh model yang digunakan untuk mengidentifikasi tingkat *toxicity* dalam teks. Teks yang digunakan adalah sebuah komentar yang mengkritik penyuntingan artikel sejarah Italia di Wikipedia.
+
+Model mengeluarkan nilai prediksi untuk setiap kategori, yaitu:
+
+toxic: 0.98362917 (98.36% kemungkinan teks tersebut bersifat kekerasan)
+severe_toxic: 0.06779731 (6.78% kemungkinan teks tersebut bersifat sangat kekerasan)
+obscene: 0.89391726 (89.39% kemungkinan teks tersebut bersifat kasar)
+threat: 0.0013799085 (0.14% kemungkinan teks tersebut bersifat ancaman)
+insult: 0.5765569 (57.66% kemungkinan teks tersebut bersifat sarkasme atau caci maki)
+identity_hate: 0.011462662 (1.15% kemungkinan teks tersebut bersifat diskriminatif)
+non_toxic: 0.00090842607 (0.09% kemungkinan teks tersebut bersifat tidak kekerasan)
+Kemudian, ditunjukkan juga nilai aktual dari teks tersebut, yaitu:
+
+toxic: 1 (teks tersebut bersifat kekerasan)
+severe_toxic: 0 (teks tersebut tidak bersifat sangat kekerasan)
+obscene: 1 (teks tersebut bersifat kasar)
+threat: 0 (teks tersebut tidak bersifat ancaman)
+insult: 0 (teks tersebut tidak bersifat sarkasme atau caci maki)
+identity_hate: 0 (teks tersebut tidak bersifat diskriminatif)
+non_toxic: 0 (teks tersebut tidak bersifat tidak kekerasan)
+Dapat dilihat bahwa model cukup baik dalam mengidentifikasi teks tersebut sebagai bersifat kekerasan dan kasar, namun kurang baik dalam mengidentifikasi teks tersebut sebagai bersifat sarkasme atau caci maki.
