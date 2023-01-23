@@ -14,16 +14,16 @@ Masalah yang telah dibahas sebelumnya adalah komentar toxic yang terjadi di medi
 
 ### Problem Statements
 
-- Mencari nilai _accuracy_ dari model sistem klasifikasi yang dibuat?
-- Mencari nilai _loss_ dari model sistem klasifikasi yang dibuat?
+- Mencari nilai _accuracy_ dari model klasifikasi yang dibuat?
+- Mencari nilai _loss_ dari model klasifikasi yang dibuat?
 
 ### Goals
 
-- Mendapatkan nilai _accuracy_ dari model sistem klasifikasi.
-- Mendapatkan nilai _loss_ dari model sistem klasifikasi.
- 
-     ### Solution statements
-     Metode yang digunakan untuk membuat sistem klasifikasi adalah 'FastTex' yang merupakan *pre-trained embedding library* untuk proses *embedding* dari kata-kata      yang akan dilatih, 'FastText' merupakan *pre-trained embedding library* yang dikembangkan oleh *Facebook AI Research (FAIR)* untuk melakuka proses vektorisasi dan      klasifikasi dari data *text* menggunakan metode *n-gram characters* sebagai unit terkecilnya. Tujuan dari pemilihan *FastText* adalah untuk meningkatkan performa      dari model.
+- Mendapatkan nilai _accuracy_ dari model klasifikasi.
+- Mendapatkan nilai _loss_ dari model klasifikasi.
+
+ ### Solution statements
+Metode yang digunakan untuk membuat sistem klasifikasi adalah 'FastTex' yang merupakan *pre-trained embedding library* untuk proses *embedding* dari kata-kata      yang akan dilatih, 'FastText' merupakan *pre-trained embedding library* yang dikembangkan oleh *Facebook AI Research (FAIR)* untuk melakuka proses vektorisasi dan      klasifikasi dari data *text* menggunakan metode *n-gram characters* sebagai unit terkecilnya. Tujuan dari pemilihan *FastText* adalah untuk meningkatkan performa      dari model.
     
 ## Data Understanding
 
@@ -52,13 +52,13 @@ Berdasarkan analisis data yang telah dilakukan, diperoleh jumlah observasi untuk
 
 Berikut merupakan visualisasi dari distribusi data. 
 
-![I1QmknU](https://user-images.githubusercontent.com/66835763/214020815-1f6d4078-ad2e-484d-b021-c674da825223.png)
+![Label Distribution](https://user-images.githubusercontent.com/66835763/214028397-d1d8ee2b-5ccd-47fb-bf00-e9def55fe48b.png)
 ###### Gambar 1, Visualisasi Distribusi Data
 
 
 Setelah mengidentifikasi label-label yang ada pada data, korelasi antar label dianalisis menggunakan library 'seaborn'. Hasil analisis menunjukkan nilai-nilai korelasi antar label yang diperoleh. Berikuit merupakan hasil visualisasi dari korelasi antar data.
 
-![5bLBzpt](https://user-images.githubusercontent.com/66835763/214021230-4b15cd32-afb1-490b-8451-efd3cdaf9385.png)
+![Label Correlation](https://user-images.githubusercontent.com/66835763/214028233-ff90b8d9-1ffb-424c-8ea5-36a3af1fcbd6.png)
 ###### Gambar 2, Visualisasi Korelasi Data
 
 
@@ -172,8 +172,7 @@ Epoch 4/4
 4488/4488 [==============================] - 145s 32ms/step - loss: 0.0438 - accuracy: 0.9770 - val_loss: 0.0502 - val_accuracy: 0.9940
 ```
 
-download.png
-![download](https://user-images.githubusercontent.com/66835763/214025576-d2e16700-7fb1-4b12-b446-24f88b9df655.png)
+![Plot Evaluation - Imgur](https://user-images.githubusercontent.com/66835763/214028558-2b4ff407-5b73-4a16-bcdf-2e228d6193f9.png)
 ###### Gambar 3, Visualisasi Data Latih
 
 ###### Hasil Data Uji
@@ -190,34 +189,18 @@ Nilai akurasi yang tinggi menunjukkan bahwa model sudah cukup baik dalam mempred
 
 
 ###### Testing Menggunakan *Text*
+
 ```
-your blatant pov pushing neither of you guys has made any contribution to this italian history article other than to shove your unhistorical unconstructive modern pov in my face. this is a history article. history. have you heard of that? this is the reason why so many people get pissed off about the pedantry and idiocy and triviality of wikipedia. j sus. get a f cking life.
-{'toxic': 0.98362917, 'severe_toxic': 0.06779731, 'obscene': 0.89391726, 'threat': 0.0013799085, 'insult': 0.5765569, 'identity_hate': 0.011462662, 'non_toxic': 0.00090842607}
-Actual Values: {'toxic': 1, 'severe_toxic': 0, 'obscene': 1, 'threat': 0, 'insult': 0, 'identity_hate': 0, 'non_toxic': 0}
+you are a gay homo. i hope you choke on your penis and die. i am sending a big bleck guy to jizz in your face.
+{'toxic': 0.9803728, 'severe_toxic': 0.37937006, 'obscene': 0.88592035, 'threat': 0.08673358, 'insult': 0.8369128, 'identity_hate': 0.22885638}
+Actual Values: {'toxic': 1, 'severe_toxic': 0, 'obscene': 1, 'threat': 1, 'insult': 1, 'identity_hate': 1}
 ```
-Hasil di atas adalah hasil dari proses klasifikasi teks oleh model yang digunakan untuk mengidentifikasi tingkat *toxicity* dalam teks. Teks yang digunakan adalah sebuah komentar yang mengkritik penyuntingan artikel sejarah Italia di Wikipedia.
+Output ini menunjukkan hasil prediksi dari model pada sebuah teks (yaitu komentar yang mengandung kata-kata yang sangat tidak sopan dan kekerasan). Model memprediksi nilai dari enam kategori. Nilai prediksi dari model ditunjukkan dengan angka dari 0 hingga 1, di mana angka yang lebih tinggi menunjukkan tingkat kekerasan yang lebih tinggi. Pada komentar ini, model memprediksi nilai yang sangat tinggi untuk semua kategori, dengan nilai tertinggi pada kategori "toxic" (0.9803728) dan nilai terendah pada kategori "threat" (0.08673358).
 
-Model mengeluarkan nilai prediksi untuk setiap kategori, yaitu:
-
-toxic: 0.98362917 (98.36% kemungkinan teks tersebut bersifat kekerasan)
-severe_toxic: 0.06779731 (6.78% kemungkinan teks tersebut bersifat sangat kekerasan)
-obscene: 0.89391726 (89.39% kemungkinan teks tersebut bersifat kasar)
-threat: 0.0013799085 (0.14% kemungkinan teks tersebut bersifat ancaman)
-insult: 0.5765569 (57.66% kemungkinan teks tersebut bersifat sarkasme atau caci maki)
-identity_hate: 0.011462662 (1.15% kemungkinan teks tersebut bersifat diskriminatif)
-non_toxic: 0.00090842607 (0.09% kemungkinan teks tersebut bersifat tidak kekerasan)
-Kemudian, ditunjukkan juga nilai aktual dari teks tersebut, yaitu:
-
-toxic: 1 (teks tersebut bersifat kekerasan)
-severe_toxic: 0 (teks tersebut tidak bersifat sangat kekerasan)
-obscene: 1 (teks tersebut bersifat kasar)
-threat: 0 (teks tersebut tidak bersifat ancaman)
-insult: 0 (teks tersebut tidak bersifat sarkasme atau caci maki)
-identity_hate: 0 (teks tersebut tidak bersifat diskriminatif)
-non_toxic: 0 (teks tersebut tidak bersifat tidak kekerasan)
-Dapat dilihat bahwa model cukup baik dalam mengidentifikasi teks tersebut sebagai bersifat kekerasan dan kasar, namun kurang baik dalam mengidentifikasi teks tersebut sebagai bersifat sarkasme atau caci maki.
+Di bawahnya, nilai sebenarnya dari komentar tersebut juga ditunjukkan dengan 1 atau 0, di mana 1 menunjukkan bahwa komentar memang mengandung unsur yang ditentukan dalam kategori tersebut dan 0 menunjukkan sebaliknya. Nilai prediksi dari model cukup baik dalam mengenali komentar ini sebagai komentar yang sangat tidak sopan dan kekerasan.
 
 ## Kesimpulan
+Model berhasil mendapatkann nilai *accuracy* dan *loss* dengan nilai yang cukup tinggi pada saat evaluasi menggunakan data validasi dan data uji, namun model masih sedikit *overfitting* dan perlu ada sedikit perubahan pada *hyperparameter*.
 
 ## Daftar Referensi
 [1]  I. Pantic, “Online social networking and Mental Health,” Cyberpsychology, Behavior, and Social Networking, vol. 17, no. 10, pp. 652–657, 2014. 
