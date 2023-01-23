@@ -14,8 +14,8 @@ Masalah yang telah dibahas sebelumnya adalah komentar toxic yang terjadi di medi
 
 ### Problem Statements
 
-- Mencari nilai _accuracy_ dari model klasifikasi yang dibuat?
-- Mencari nilai _loss_ dari model klasifikasi yang dibuat?
+- Berapa nilai _accuracy_ yang mampu dihasilkan oleh model klasifikasi?
+- Berapa nilai _loss_ yang mampu dihasilkan oleh model klasifikasi?
 
 ### Goals
 
@@ -200,7 +200,7 @@ Output ini menunjukkan hasil prediksi dari model pada sebuah teks (yaitu komenta
 Di bawahnya, nilai sebenarnya dari komentar tersebut juga ditunjukkan dengan 1 atau 0, di mana 1 menunjukkan bahwa komentar memang mengandung unsur yang ditentukan dalam kategori tersebut dan 0 menunjukkan sebaliknya. Nilai prediksi dari model cukup baik dalam mengenali komentar ini sebagai komentar yang sangat tidak sopan dan kekerasan.
 
 ## Kesimpulan
-Model berhasil mendapatkann nilai *accuracy* dan *loss* dengan nilai yang cukup tinggi pada saat evaluasi menggunakan data validasi dan data uji, namun model masih sedikit *overfitting* dan perlu ada sedikit perubahan pada *hyperparameter*.
+Model berhasil mendapatkan nilai *accuracy* dan *loss* dengan nilai yang cukup tinggi pada saat evaluasi menggunakan data validasi dan data uji, namun model masih sedikit *overfitting* dan perlu ada sedikit perubahan pada *hyperparameter*.
 
 ## Daftar Referensi
 [1]  I. Pantic, “Online social networking and Mental Health,” Cyberpsychology, Behavior, and Social Networking, vol. 17, no. 10, pp. 652–657, 2014. 
