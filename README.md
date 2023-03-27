@@ -199,6 +199,39 @@ Output ini menunjukkan hasil prediksi dari model pada sebuah teks (yaitu komenta
 
 Di bawahnya, nilai sebenarnya dari komentar tersebut juga ditunjukkan dengan 1 atau 0, di mana 1 menunjukkan bahwa komentar memang mengandung unsur yang ditentukan dalam kategori tersebut dan 0 menunjukkan sebaliknya. Nilai prediksi dari model cukup baik dalam mengenali komentar ini sebagai komentar yang sangat tidak sopan dan kekerasan.
 
+###### *Classification Report*
+```
+               precision    recall  f1-score   support
+
+        toxic       0.58      0.82      0.68      6090
+ severe_toxic       0.39      0.44      0.42       367
+      obscene       0.66      0.76      0.71      3691
+       threat       1.00      0.00      0.00       211
+       insult       0.61      0.65      0.63      3427
+identity_hate       1.00      0.00      0.00       712
+
+    micro avg       0.60      0.70      0.65     14498
+    macro avg       0.71      0.45      0.41     14498
+ weighted avg       0.63      0.70      0.62     14498
+  samples avg       0.94      0.97      0.91     14498
+```
+Classification Report yang diberikan merupakan hasil evaluasi performa dari sebuah model klasifikasi multilabel pada suatu dataset dengan menggunakan beberapa metrik evaluasi yaitu precision, recall, dan f1-score untuk setiap label kelas dan juga untuk seluruh label kelas.
+
+Berikut adalah penjelasan dari setiap metrik evaluasi dalam Classification Report tersebut:
+
+Precision: Nilai precision mengukur seberapa akurat model dalam memprediksi suatu label kelas, yaitu seberapa banyak prediksi model yang benar (true positives) dibandingkan dengan total prediksi yang dilakukan (true positives + false positives). Pada hasil Classification Report di atas, precision tertinggi terdapat pada label "threat" dan "identity_hate" yaitu 1.00 yang berarti model selalu melakukan prediksi yang tepat untuk label-label tersebut, sedangkan label dengan precision terendah adalah "severe_toxic" yaitu 0.39 yang berarti model cenderung memprediksi label tersebut sebagai negatif padahal seharusnya positif.
+
+Recall: Nilai recall mengukur seberapa banyak model dapat mengenali suatu label kelas dari total kasus yang seharusnya positif (true positives + false negatives). Recall yang tinggi menunjukkan bahwa model dapat mengenali sebanyak mungkin kasus positif. Pada hasil Classification Report di atas, recall tertinggi terdapat pada label "toxic" yaitu 0.82 yang berarti model dapat mengenali 82% dari seluruh kasus yang seharusnya positif untuk label tersebut, sedangkan label dengan recall terendah adalah "threat" dan "identity_hate" yaitu 0.00 yang berarti model tidak dapat mengenali satupun kasus yang seharusnya positif untuk label-label tersebut.
+
+F1-score: Nilai F1-score merupakan harmonic mean dari precision dan recall dan digunakan untuk mengukur keseimbangan antara precision dan recall. F1-score yang tinggi menunjukkan keseimbangan yang baik antara precision dan recall. Pada hasil Classification Report di atas, f1-score tertinggi terdapat pada label "obscene" yaitu 0.71 yang berarti model dapat mencapai keseimbangan yang baik antara precision dan recall untuk label tersebut, sedangkan label dengan f1-score terendah adalah "threat" dan "identity_hate" yaitu 0.00 yang berarti model tidak dapat mencapai keseimbangan yang baik antara precision dan recall untuk label-label tersebut.
+
+Selain itu, pada Classification Report di atas juga terdapat beberapa informasi tambahan yaitu:
+
+Support: Jumlah kasus dalam dataset yang termasuk ke dalam suatu label kelas.
+Micro Average: Nilai rata-rata dari seluruh true positives, false positives, dan false negatives di seluruh label kelas.
+Macro Average: Nilai rata-rata dari precision, recall, dan f1-score untuk setiap label kelas secara terpisah.
+Weighted Average: Nilai rata-rata dari precision, recall, dan f1-score untuk setiap label kelas, dengan bobot yang dihitung berdasarkan jumlah kasus dalam dataset yang termasuk ke dalam masing-masing label kelas.
+Samples Average: Nilai rata-rata dari precision, recall, dan f1-score untuk setiap kasus individu dalam dataset, dengan asumsi setiap kasus individu memiliki
 ## Kesimpulan
 Model berhasil mendapatkan nilai *accuracy* dan *loss* dengan nilai yang cukup tinggi pada saat evaluasi menggunakan data validasi dan data uji, namun model masih sedikit *overfitting* dan perlu ada sedikit perubahan pada *hyperparameter*.
 
